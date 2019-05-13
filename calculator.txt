@@ -74,7 +74,7 @@ namespace ConsoleApp2
                 if (IsDelimeter(input[i]))
                     continue;
 
-                if (input[i]=='-' && ((i>0 && !Char.IsDigit(input[i-1])) || i==0))
+                if (input[i]=='-' && ((i>0 && !Char.IsDigit(input[i-1]) && input[i-1]!=')' && input[i - 1] != '!') || i==0))
                 {
                     output += "0";
                     output += " ";
